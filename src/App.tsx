@@ -14,7 +14,7 @@ function App() {
 
       <Tabs currentIndex={currentIndex} onClick={handleClickTab}>
         <div>
-          <TabButton index={0}>Asterisco</TabButton>
+          <TabButton index={0}>Asterisco (*)</TabButton>
           <TabButton index={1}>Outra coisa</TabButton>
         </div>
 
