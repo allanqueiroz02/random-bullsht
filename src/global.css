@@ -1,0 +1,18 @@
+@font-face {
+  src: url("./assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+  font-family: "Space Mono";
+}
+
+@font-face {
+  src: url("./assets/fonts/VT323/VT323-Regular.ttf");
+  font-family: "VT323";
+}
+
+:root {
+  background: #f7f7f7;
+}
+
+* {
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+}
