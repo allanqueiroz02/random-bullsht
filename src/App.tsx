@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TabButton, TabContent, Tabs } from "./components/Tabs";
 import { Header } from "./components/Header";
-import { EmAsteriscos } from "./screens/EmAsteriscos";
+import { EmAsteriscos } from "./pages/EmAsteriscos";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
