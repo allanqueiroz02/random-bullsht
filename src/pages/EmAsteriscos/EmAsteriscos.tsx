@@ -4,7 +4,7 @@ import "./styles.css";
 
 export const EmAsteriscos = () => {
   const [input, setInput] = useState("");
-  const [converted, setConverted] = useState("");
+  const [convertedValue, setConvertedValue] = useState("");
   const [hideAll, setHideAll] = useState(false);
   const [hideOnlyNumber, setHideOnlyNumbers] = useState(false);
 
@@ -12,6 +12,12 @@ export const EmAsteriscos = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
+  };
+
+  const handleClickCopy = () => {
+    console.log(convertedValue);
+    navigator.clipboard.writeText(convertedValue);
+    alert("Copiou o texto");
   };
 
   useEffect(() => {
@@ -22,7 +28,7 @@ export const EmAsteriscos = () => {
     const regex = hideAll ? /\w/g : hideOnlyNumber ? /\d/g : /\w/;
     const convertedValue = input.replace(regex, "*");
 
-    setConverted(convertedValue);
+    setConvertedValue(convertedValue);
   }, [input, hideAll, hideOnlyNumber]);
 
   return (
@@ -58,7 +64,11 @@ export const EmAsteriscos = () => {
         />
       </div>
 
-      <div className="container-informacao">{converted}</div>
+      <div className="container-informacao">{convertedValue}</div>
+
+      <div className="container-copiar-btn">
+        <button onClick={handleClickCopy}>Copiar!</button>
+      </div>
     </div>
   );
 };
