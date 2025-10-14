@@ -1,3 +1,8 @@
-.title {
+.container-header {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, .19);
+}
+
+.header {
   font-family: "VT323", monospace;
 }
