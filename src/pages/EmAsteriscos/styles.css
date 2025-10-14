@@ -4,7 +4,15 @@
 
 .container-checkboxs {
   margin-bottom: 0.5rem;
-  accent-color: #ff0000;
+}
+
+.container-checkboxs label {
+  cursor: pointer;
+}
+
+.container-checkboxs label:not(:last-child) {
+  /* border: 1px solid red; */
+  margin-right: 1rem;
 }
 
 .container-input input {
