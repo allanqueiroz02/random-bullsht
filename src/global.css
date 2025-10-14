@@ -8,8 +8,11 @@
   font-family: "VT323";
 }
 
+/* https://encycolorpedia.com/7f00ff */
+
 :root {
   --primary-color: #7f00ff;
+  --primary-color-light: #8e1fff;
   --grey-1: #f7f7f7;
   --white: #ffffff;
 
