@@ -9,7 +9,17 @@
 }
 
 :root {
-  background: #f7f7f7;
+  --primary-color: #7f00ff;
+  --grey-1: #f7f7f7;
+  --white: #ffffff;
+
+  background: var(--grey-1);
+  accent-color: var(--primary-color);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0px auto;
 }
 
 * {
