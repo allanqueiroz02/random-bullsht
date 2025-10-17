@@ -1,8 +1,17 @@
 .container-header {
   background-color: #ffffff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, .19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.19);
 }
 
 .header {
   font-family: "VT323", monospace;
+  margin: 0 0 1rem;
+  padding: 1rem 0.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+.header > svg {
+  margin-left: 1rem;
 }
