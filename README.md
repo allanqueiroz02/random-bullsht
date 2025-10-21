@@ -4,7 +4,7 @@
 
 ## Metas de implementações
 
-- [ ] programa que transforma frase em format de asterisco.
+- [x] programa que transforma frase em format de asterisco.
 - [ ] random picks lolzin.
 - [ ] pick me a movie.
 - [ ] sim, uma pokedex;

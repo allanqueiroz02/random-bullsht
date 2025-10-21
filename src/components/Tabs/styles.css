@@ -1,0 +1,25 @@
+.tab-button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--grey-2);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+.tab-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease-in-out;
+}
+.tab-button.active::before {
+  width: 100%;
+}
+
+.active {
+  color: var(--primary-color);
+}
