@@ -1,26 +1,37 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 .container {
   margin-top: 1rem;
 }
 
-.container-checkboxs {
+.container-checkbox {
+  display: flex;
+  gap: 1rem;
   margin-bottom: 0.5rem;
 }
-
-.container-checkboxs label {
+.container-checkbox label {
   cursor: pointer;
 }
-
-.container-checkboxs label:not(:last-child) {
-  /* border: 1px solid red; */
-  margin-right: 1rem;
+.container-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
 }
 
 .container-input input {
   display: block;
   width: 100%;
-  padding: 1.5rem 0.75rem;
+  padding: 0.75rem 0.75rem;
   font-size: 1.3rem;
   font-weight: 600;
+  outline-color: var(--primary-color);
+  transition: 0.3s;
+}
+.container-input input:focus {
+  outline-color: var(--primary-color-light);
 }
 
 .container-informacao {
@@ -48,4 +59,8 @@
 }
 .container-copiar-btn button:hover {
   background-color: var(--primary-color-light);
+}
+
+.extra-margin-right {
+  margin-right: 100px;
 }
