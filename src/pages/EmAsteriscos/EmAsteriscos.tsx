@@ -34,25 +34,26 @@ export const EmAsteriscos = () => {
 
   return (
     <div className="container">
-      <div className="container-checkboxs">
-        <label className="extra-margin-right">
+      <div className="container-checkbox">
+        <div className="flex">
           <input
             type="checkbox"
             id="hideAll"
             checked={hideAll}
             onChange={() => setHideAll((prev) => !prev)}
           />
-          Esconder todos
-        </label>
-        <label>
+          <label htmlFor="hideAll">Esconder todos</label>
+        </div>
+
+        <div className="flex">
           <input
             type="checkbox"
             id="hideOnlyNumbers"
             checked={hideOnlyNumber}
             onChange={() => setHideOnlyNumbers((prev) => !prev)}
           />
-          Apenas números
-        </label>
+          <label htmlFor="hideOnlyNumbers">Apenas números</label>
+        </div>
       </div>
 
       <div className="container-input">

@@ -1,4 +1,14 @@
-import { useContext, useEffect, useRef, type ReactNode } from "react";
+import {
+  useContext,
+  useEffect,
+  useRef,
+  type ComponentType,
+  type ReactNode,
+} from "react";
+import type { IconBaseProps } from "react-icons";
+import { LiaRandomSolid } from "react-icons/lia";
+
+
 import { TabsContext } from "../TabsContext";
 
 import "../styles.css";
@@ -6,10 +16,16 @@ import "../styles.css";
 interface ITabButton {
   children: ReactNode;
   index: number;
+  Icon?: ComponentType<IconBaseProps>;
 }
 
-export const TabButton = ({ children, index }: ITabButton) => {
+export const TabButton = ({
+  children,
+  index,
+  Icon = LiaRandomSolid,
+}: ITabButton) => {
   const tabsContext = useContext(TabsContext);
+
   const isTabActive = index === tabsContext?.currentIndex;
   const buttonRef = useRef<null | HTMLButtonElement>(null);
 
@@ -33,7 +49,10 @@ export const TabButton = ({ children, index }: ITabButton) => {
       onClick={() => tabsContext?.onClick(index)}
       className="tab-button"
     >
-      {children}
+      <div className="container-content">
+        {children}
+        {Icon && <Icon style={{ fontSize: "17" }} />}
+      </div>
     </button>
   );
 };
