@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BsBracesAsterisk } from "react-icons/bs";
 
 import { Header } from "../Header";
 import { TabButton, TabContent, Tabs } from "../Tabs";
@@ -18,7 +19,9 @@ function App() {
       <main className="container-main">
         <Tabs currentIndex={currentIndex} onClick={handleClickTab}>
           <div>
-            <TabButton index={0}>Asterisco (*)</TabButton>
+            <TabButton index={0} Icon={BsBracesAsterisk}>
+              Asterisco
+            </TabButton>
             <TabButton index={1}>Outra coisa</TabButton>
           </div>
 
