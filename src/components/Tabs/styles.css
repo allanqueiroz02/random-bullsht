@@ -20,12 +20,6 @@
   width: 100%;
 }
 
-.container-content {
-  display: flex;
-  align-items: center;
-  gap: 0.275rem;
-}
-
 .active {
   color: var(--primary-color);
 }
