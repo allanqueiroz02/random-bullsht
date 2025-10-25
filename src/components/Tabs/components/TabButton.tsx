@@ -5,12 +5,12 @@ import {
   type ComponentType,
   type ReactNode,
 } from "react";
+import type { IconBaseProps } from "react-icons";
 
 import { Button } from "../../Button";
 import { TabsContext } from "../TabsContext";
 
 import "../styles.css";
-import type { IconBaseProps } from "react-icons";
 
 interface ITabButton {
   children: ReactNode;
