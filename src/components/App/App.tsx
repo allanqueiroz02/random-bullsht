@@ -19,7 +19,7 @@ function App() {
       <main className="container-main">
         <Tabs currentIndex={currentIndex} onClick={handleClickTab}>
           <div>
-            <TabButton index={0} Icon={BsBracesAsterisk}>
+            <TabButton index={0} icon={BsBracesAsterisk}>
               Asterisco
             </TabButton>
             <TabButton index={1}>Outra coisa</TabButton>

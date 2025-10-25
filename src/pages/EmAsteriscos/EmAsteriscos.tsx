@@ -1,6 +1,8 @@
 import { useState, type ChangeEvent, useRef, useEffect } from "react";
 import { FaRegCopy } from "react-icons/fa";
 
+import { Button } from "../../components/Button";
+
 import "./styles.css";
 
 export const EmAsteriscos = () => {
@@ -69,9 +71,9 @@ export const EmAsteriscos = () => {
       <div className="container-informacao">{convertedValue}</div>
 
       <div className="container-copiar-btn">
-        <button onClick={handleClickCopy}>
-          Copiar! <FaRegCopy />
-        </button>
+        <Button onClick={handleClickCopy} icon={FaRegCopy}>
+          Copiar!
+        </Button>
       </div>
     </div>
   );
