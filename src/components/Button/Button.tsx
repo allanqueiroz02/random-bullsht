@@ -1,3 +1,42 @@
-export const Button = () => {
-  return <button>Teste</button>;
+import type {
+  ButtonHTMLAttributes,
+  ComponentType,
+  CSSProperties,
+  ReactNode,
+  Ref,
+} from "react";
+import type { IconBaseProps } from "react-icons";
+import { LiaRandomSolid } from "react-icons/lia";
+
+import "./styles.css";
+
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  icon?: ComponentType<IconBaseProps>;
+  iconStyle?: CSSProperties;
+  ref?: Ref<HTMLButtonElement>;
+}
+
+export const Button = ({
+  children,
+  icon = LiaRandomSolid,
+  iconStyle,
+  ref,
+  ...props
+}: IButtonProps) => {
+  const IconComponent = icon;
+
+  return (
+    <button ref={ref} {...props}>
+      <div className="container-content">
+        {children}
+
+        {IconComponent && (
+          <IconComponent
+            style={{ fontSize: "17", ...(iconStyle && { ...iconStyle }) }}
+          />
+        )}
+      </div>
+    </button>
+  );
 };
