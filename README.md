@@ -4,14 +4,16 @@
 
 ## Metas de implementações
 
-- [x] programa que transforma frase em format de asterisco.
-- [ ] random picks lolzin.
-- [ ] pick me a movie.
-- [ ] sim, uma pokedex;
-- [ ] input range para indicar a porcentagem da página;
-- [ ] uma tela que vai mostrando os estilos e onde é possível alterar os estilos;
-- [ ] resumo dos games do ano;
-- [ ] criar um link tree cim degrade color;
-- [ ] adicionar um desfazer;
-- [ ] criar uma página com duas sidebars, a principal e seção da página;
-- [ ] gerador de senhas;
+- [x] Transformador de caracteres em asterisco;
+- [ ] Bin to dec;
+- [ ] Random picks lolzin (?);
+- [ ] Pick me a movie;
+- [ ] Sim, uma pokedex;
+- [ ] Input range para indicar a porcentagem da página;
+- [ ] Uma tela que vai mostrando os estilos e onde é possível alterar os estilos;
+- [ ] Resumo dos games do ano;
+- [ ] Criar um link tree com degrade color;
+- [ ] Adicionar um desfazer;
+- [ ] Criar uma página com duas sidebars, a principal e seção da página;
+- [ ] Gerador de senhas;
+- [ ] Um portal como da nfs;
