@@ -1,4 +1,5 @@
 .container-header {
+  position: relative;
   background-color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.19);
 }
@@ -14,4 +15,13 @@
 }
 .header > svg {
   margin-left: 1rem;
+}
+
+.theme-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
 }
