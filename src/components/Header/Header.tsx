@@ -1,11 +1,19 @@
 import { GiThrownDaggers } from "react-icons/gi";
-import { VscColorMode } from "react-icons/vsc";
+import { TbSunMoon } from "react-icons/tb";
 
 import "./style.css";
 
 export const Header = () => {
   function handleClickTheme() {
-    console.log("clicou no ícone");
+    const bodyClass = document.body.classList;
+
+    if (bodyClass.contains("light-theme")) {
+      bodyClass.remove("light-theme");
+      bodyClass.add("dark-theme");
+    } else {
+      bodyClass.remove("dark-theme");
+      bodyClass.add("light-theme");
+    }
   }
 
   return (
@@ -13,7 +21,7 @@ export const Header = () => {
       <h1 className="header">
         Random Bullshit Go!!!! <GiThrownDaggers />
       </h1>
-      <VscColorMode
+      <TbSunMoon
         className="theme-icon"
         title="Alterar tema"
         onClick={handleClickTheme}
