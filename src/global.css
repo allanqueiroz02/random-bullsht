@@ -13,7 +13,7 @@
 :root {
   --primary-color: #7f00ff;
   --primary-color-light: #8e1fff;
-  
+
   --grey-1: #f7f7f7;
   --grey-2: #e9e9e9;
 
@@ -58,4 +58,33 @@ body.dark-theme input {
 
 button {
   cursor: pointer;
+}
+
+input[type="text"],
+input[type="number"] {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline-color: var(--primary-color);
+}
+input[type="text"],
+input[type="number"] {
+  outline-color: var(--primary-color-light);
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* For Firefox */
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+/* For other browsers, including a fallback for the above */
+input[type="number"] {
+  appearance: textfield;
 }
