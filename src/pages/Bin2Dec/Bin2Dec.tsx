@@ -16,7 +16,6 @@ export const Bin2Dec = () => {
       return;
     }
 
-    // 1010111
     for (let index = 0; index < binNumber.length; index++) {
       const element = Number(binNumber[index]);
       const multipler = Math.pow(2, expoent);
@@ -40,6 +39,7 @@ export const Bin2Dec = () => {
   return (
     <div className="container-bin">
       <div className="content">
+        <label>Converter de binário</label>
         <input
           type="number"
           value={binNumber}
@@ -52,6 +52,7 @@ export const Bin2Dec = () => {
         <FaExchangeAlt />
       </div>
       <div className="content">
+        <label>Para decimal</label>
         <input
           type="text"
           value={convertedNumber}
