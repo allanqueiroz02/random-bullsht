@@ -1,8 +1,7 @@
 .container-bin {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
+  margin-top: 1rem;
 }
 .container-bin input {
   width: 100%;
