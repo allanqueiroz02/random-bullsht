@@ -1,11 +1,13 @@
 .container-bin {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 .container-bin input {
   width: 100%;
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .content {
@@ -13,7 +15,8 @@
 }
 
 .container-change-icon {
-  margin: 0 1.5rem 0;
+  margin: 1.5rem 0;
+  align-self: center;
 }
 .container-change-icon svg {
   width: 1.5rem;
