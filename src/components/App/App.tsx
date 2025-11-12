@@ -6,6 +6,7 @@ import { TabButton, TabContent, Tabs } from "../Tabs";
 import { EmAsteriscos } from "../../pages/EmAsteriscos";
 
 import "./styles.css";
+import { Bin2Dec } from "../../pages/Bin2Dec";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,13 +23,15 @@ function App() {
             <TabButton index={0} icon={BsBracesAsterisk}>
               Asterisco
             </TabButton>
-            <TabButton index={1}>Outra coisa</TabButton>
+            <TabButton index={1}>Bin2Dec</TabButton>
           </div>
 
           <TabContent index={0}>
             <EmAsteriscos />
           </TabContent>
-          <TabContent index={1}>Componente 2</TabContent>
+          <TabContent index={1}>
+            <Bin2Dec />
+          </TabContent>
         </Tabs>
       </main>
     </div>

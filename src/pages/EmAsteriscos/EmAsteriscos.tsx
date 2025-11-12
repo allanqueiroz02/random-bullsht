@@ -61,6 +61,7 @@ export const EmAsteriscos = () => {
       <div className="container-input">
         <input
           ref={inputRef}
+          type="text"
           name="asterisco"
           value={input}
           onChange={handleChange}

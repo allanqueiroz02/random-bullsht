@@ -1,0 +1,25 @@
+.container-bin {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.container-bin input {
+  width: 100%;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.content {
+  flex: 1;
+}
+
+.container-change-icon {
+  margin: 1.5rem 0;
+  align-self: center;
+}
+.container-change-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-color);
+}
