@@ -6,7 +6,6 @@ import type {
   Ref,
 } from "react";
 import type { IconBaseProps } from "react-icons";
-import { LiaRandomSolid } from "react-icons/lia";
 
 import "./styles.css";
 
@@ -19,7 +18,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = ({
   children,
-  icon = LiaRandomSolid,
+  icon,
   iconStyle,
   ref,
   ...props
