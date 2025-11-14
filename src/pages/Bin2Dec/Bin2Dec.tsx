@@ -1,23 +1,27 @@
 import { FaExchangeAlt } from "react-icons/fa";
 
 import "./style.css";
-import { useCallback, useEffect, useState, type ChangeEvent } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { Button } from "../../components/Button";
 
 export const Bin2Dec = () => {
-  const [binNumber, setBinNumber] = useState("");
+  const [whichSystem, setWhichSystem] = useState<"binary" | "decimal">(
+    "binary"
+  );
+  const [numberToConvert, setNumberToConvert] = useState("");
   const [convertedNumber, setConvertedNumber] = useState("");
 
-  const convertBinToDec = useCallback(() => {
+  const binToDec = useCallback(() => {
     let total = 0;
-    let expoent = binNumber.length - 1;
+    let expoent = numberToConvert.length - 1;
 
-    if (!binNumber) {
+    if (!numberToConvert) {
       setConvertedNumber("");
       return;
     }
 
-    for (let index = 0; index < binNumber.length; index++) {
-      const element = Number(binNumber[index]);
+    for (let index = 0; index < numberToConvert.length; index++) {
+      const element = Number(numberToConvert[index]);
       const multipler = Math.pow(2, expoent);
       const result = element * multipler;
 
@@ -26,41 +30,92 @@ export const Bin2Dec = () => {
     }
 
     setConvertedNumber(`${total}`);
-  }, [binNumber]);
+  }, [numberToConvert]);
 
-  const handleBinaryNumberChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setBinNumber(event.target.value);
+  const decToBin = useCallback(() => {
+    if (!numberToConvert) {
+      setConvertedNumber("");
+      return;
+    }
+
+    if (Number(numberToConvert) === 0) {
+      setConvertedNumber("0");
+      return;
+    }
+
+    if (Number(numberToConvert) === 1) {
+      setConvertedNumber("1");
+      return;
+    }
+
+    const arrTotal: number[] = [];
+
+    function calcula(valor: number) {
+      arrTotal.push(valor % 2);
+
+      const valorFinal = Math.floor(valor / 2);
+
+      if (valorFinal !== 1) calcula(valorFinal);
+      if (valorFinal === 1) arrTotal.push(1);
+
+      return;
+    }
+
+    calcula(Number(numberToConvert));
+
+    const formattedArr = arrTotal.reverse().join("");
+
+    setConvertedNumber(formattedArr);
+  }, [numberToConvert]);
+
+  const handleSwitchSystem = () => {
+    if (whichSystem === "binary") {
+      setWhichSystem("decimal");
+      return;
+    }
+
+    setWhichSystem("binary");
   };
 
   useEffect(() => {
-    convertBinToDec();
-  }, [binNumber, convertBinToDec]);
+    if (whichSystem === "binary") binToDec();
+    else decToBin();
+  }, [numberToConvert, binToDec, whichSystem, decToBin]);
 
   return (
     <div className="container-bin">
       <div className="content">
-        <label>Converter de binário</label>
+        <label>
+          Converter de{" "}
+          <strong>{whichSystem === "binary" ? "binário" : "decimal"}</strong>
+        </label>
         <input
           type="number"
-          value={binNumber}
-          onChange={handleBinaryNumberChange}
-          placeholder="apenas 0 e 1"
+          value={numberToConvert}
+          onChange={(e) => setNumberToConvert(e.target.value)}
+          placeholder={whichSystem === "binary" ? "informe apenas 0 e 1" : ""}
           id="bin-number"
         />
       </div>
       <div className="container-change-icon">
-        <FaExchangeAlt />
+        <Button onClick={handleSwitchSystem} title="Trocar sistema númerico">
+          <FaExchangeAlt />
+        </Button>
       </div>
       <div className="content">
-        <label>Para decimal</label>
+        <label>
+          Para{" "}
+          <strong>{whichSystem === "binary" ? "decimal" : "binário"}</strong>
+        </label>
         <input
           type="text"
           value={convertedNumber}
-          placeholder="resultado..."
+          placeholder="resultado"
           id="converted-number"
           disabled
         />
       </div>
+      sistema número: {whichSystem}
     </div>
   );
 };
