@@ -69,6 +69,8 @@ export const Bin2Dec = () => {
   }, [numberToConvert]);
 
   const handleSwitchSystem = () => {
+    setNumberToConvert("");
+
     if (whichSystem === "binary") {
       setWhichSystem("decimal");
       return;
