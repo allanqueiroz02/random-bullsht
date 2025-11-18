@@ -1,0 +1,26 @@
+#container-previewer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 1; */
+  height: calc(100vh - 7.5rem);
+}
+
+.previewer-input {
+  margin-bottom: 1rem;
+}
+.previewer-input input {
+  width: 550px;
+}
+
+.previewer-input span {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#previewer {
+  width: 550px;
+  height: 220px;
+  border: 1px solid var(--black-2);
+}
