@@ -117,7 +117,6 @@ export const Bin2Dec = () => {
           disabled
         />
       </div>
-      sistema número: {whichSystem}
     </div>
   );
 };
