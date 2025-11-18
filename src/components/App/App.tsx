@@ -7,6 +7,7 @@ import { EmAsteriscos } from "../../pages/EmAsteriscos";
 
 import "./styles.css";
 import { Bin2Dec } from "../../pages/Bin2Dec";
+import { BorderRadiusPreviwer } from "../../pages/BorderRadiusPreviewer";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,6 +25,7 @@ function App() {
               Asterisco
             </TabButton>
             <TabButton index={1}>Bin2Dec</TabButton>
+            <TabButton index={2}>Border-Radius Previewer</TabButton>
           </div>
 
           <TabContent index={0}>
@@ -31,6 +33,9 @@ function App() {
           </TabContent>
           <TabContent index={1}>
             <Bin2Dec />
+          </TabContent>
+          <TabContent index={2}>
+            <BorderRadiusPreviwer />
           </TabContent>
         </Tabs>
       </main>
