@@ -5,8 +5,8 @@
 }
 .container-bin input {
   width: 100%;
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .content {
@@ -21,4 +21,9 @@
   width: 1.5rem;
   height: 1.5rem;
   color: var(--primary-color);
+}
+.container-change-icon button {
+  border-radius: 50%;
+  border: none;
+  background-color: var(--white);
 }

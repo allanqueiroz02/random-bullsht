@@ -1,7 +1,7 @@
 import { FaExchangeAlt } from "react-icons/fa";
 
 import "./style.css";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "../../components/Button";
 
 export const Bin2Dec = () => {
@@ -10,6 +10,8 @@ export const Bin2Dec = () => {
   );
   const [numberToConvert, setNumberToConvert] = useState("");
   const [convertedNumber, setConvertedNumber] = useState("");
+
+  const inputNumberToConvertRef = useRef<HTMLInputElement | null>(null);
 
   const binToDec = useCallback(() => {
     let total = 0;
@@ -69,6 +71,10 @@ export const Bin2Dec = () => {
   }, [numberToConvert]);
 
   const handleSwitchSystem = () => {
+    setNumberToConvert("");
+
+    inputNumberToConvertRef.current?.focus();
+
     if (whichSystem === "binary") {
       setWhichSystem("decimal");
       return;
@@ -95,6 +101,7 @@ export const Bin2Dec = () => {
           onChange={(e) => setNumberToConvert(e.target.value)}
           placeholder={whichSystem === "binary" ? "informe apenas 0 e 1" : ""}
           id="bin-number"
+          ref={inputNumberToConvertRef}
         />
       </div>
       <div className="container-change-icon">
@@ -115,7 +122,6 @@ export const Bin2Dec = () => {
           disabled
         />
       </div>
-      sistema número: {whichSystem}
     </div>
   );
 };
