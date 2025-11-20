@@ -26,3 +26,32 @@
     border-color: transparent;
   }
 }
+
+/* PULSE EFFECT */
+.pulse {
+  width: 50px;
+  height: 50px;
+  margin-top: 0.8rem;
+  background: rgb(127, 0, 255);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(127, 0, 255, 1);
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(127, 0, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba(127, 0, 255, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(127, 0, 255, 0);
+  }
+}
